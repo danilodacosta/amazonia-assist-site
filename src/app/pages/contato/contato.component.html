@@ -1,0 +1,54 @@
+<section class="contato">
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-md-6 contato-text">
+        <div class="contato-title">Solicite<br> uma visita</div>
+        <div class="contato-subtitle">Contato</div>
+        <div class="contato-email">falecom@amazoniassist.com.br</div>
+        <div class="contato-description">
+          Av. Presidente Vargas, 158<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ed. Associação Comercial do Pará, Sala 603<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Campina - Belém - PA <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CEP 66.010-000<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(91) 99300-1798<br>
+        </div>
+      </div>
+      <div class="col-md-6 mobile-margem">
+        <form class="form" [formGroup]="formCliente" (ngSubmit)="enviar()">
+
+          <input type="text" [class.has-error]="hasError(formCliente.get('nome'))" placeholder="Nome" formControlName="nome">
+          <span class="help-block" *ngIf="hasError(formCliente.get('nome'))">{{getErrorMessage(formCliente.get('nome'))}}</span>
+
+          <input [class.has-error]="hasError(formCliente.get('email'))" type="mail" placeholder="E-mail" formControlName="email" >
+          <span *ngIf="hasError(formCliente.get('email'))" class="help-block">{{getErrorMessage(formCliente.get('email'))}}</span>
+
+          <input (focus)="resetMask()" (focusout)="focusOutFunction()"  [imask]="{mask: phoneMask }" [class.has-error]="hasError(formCliente.get('telefone'))" type="mail" placeholder="Telefone" formControlName="telefone" >
+          <span *ngIf="hasError(formCliente.get('telefone'))" class="help-block">{{getErrorMessage(formCliente.get('telefone'))}}</span>
+
+          <label [class.error]="hasError(formCliente.get('assunto'))">Assunto</label>
+          <select formControlName="assunto" [class.has-error]="hasError(formCliente.get('assunto'))">
+              <option [value]="'Cuidador de Pessoas'">Cuidadores de Pessoa</option>
+              <option [value]="'Cuidador de Pessoas'">Consultoria em Saúde</option>
+              <option [value]="'Outros Assuntos'">Outros Assuntos</option>
+
+           </select>
+           <span class="help-block" *ngIf="hasError(formCliente.get('assunto'))">{{getErrorMessage(formCliente.get('assunto'))}}</span>
+
+          <textarea placeholder="Mensagem" formControlName="mensagem"></textarea>
+
+
+          <div class="row">
+
+
+            <button [disabled]="formCliente.invalid || isEnviando" class="btn-main-primary enviar" href="#">
+              <div class="text">Enviar</div>
+            </button>
+            <span class="margem-esquerda" *ngIf="isEnviando">
+              <i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>
+          </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

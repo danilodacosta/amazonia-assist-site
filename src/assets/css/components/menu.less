@@ -1,0 +1,66 @@
+// compress: true
+
+@import url("../mixins/functions.less");
+
+//
+// Menu
+//
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  nav {
+    background-color: transparent;
+    margin-top: 50px;
+    border: none;
+    #bs-example-navbar-collapse-1 {
+     
+    }
+    ul {
+      margin-top: 20px;
+      li {
+        a {
+          margin: 0 5px 0 5px;
+          padding: 8px 15px 8px 15px;
+          border-radius: 5px;
+          font-size: 18px;
+          font-family: @open;
+          color: @gray-10;
+          .transition(all .5s);
+          .transform(skewX(-20deg));
+          .text{
+            .transform(skewX(20deg));
+          }
+          &:hover {
+            margin: 0 5px 0 5px;
+            background-color: @green!important;
+            color: @white!important;
+            border-radius: 5px;
+            display: inline-block;
+            .transform(skewX(-20deg));
+            .transition(all .5s);
+            .text{
+              .transform(skewX(20deg));
+            }
+          }
+        }
+      }
+    }
+    // toggle
+    button {
+      margin: 20px 25px 0 0;
+      background-color: @green!important;
+      border: none;
+      .icon-bar {
+        display: block;
+        width: 22px;
+        height: 3px;
+        border-radius: 1px;
+        background-color: @white!important;
+      }
+    }
+  }
+}

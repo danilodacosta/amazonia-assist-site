@@ -1,0 +1,56 @@
+// compress: true
+
+@import url("../mixins/functions.less");
+
+//
+// Buttons
+//
+
+.btn-main-primary {
+  .btn-main-primary();
+}
+
+.btn-main-primary() {
+  position: relative;
+  z-index: @z-index-1;
+  background-color: @white;
+  padding: 7px 25px 7px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  width: 100%;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: @open;
+  text-align: center;
+  color: @black;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: @open;
+  text-align: center;
+  color: @black;
+  .transform(skewX(-20deg));
+  .text {
+    .transform(skewX(20deg));
+  }
+  &:hover{
+    .transition(all .5s);
+    text-decoration: none;
+    background-color: @white;
+    display: inline-block;
+  } 
+  &:active{
+    text-decoration: none;
+    color: @white;
+    display: inline-block;
+  }
+  &:disabled {
+    text-decoration: none;
+    background-color: @gray;
+    color: @white;
+    display: inline-block;
+  }
+}
+

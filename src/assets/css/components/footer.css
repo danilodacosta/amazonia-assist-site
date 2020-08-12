@@ -1,0 +1,55 @@
+.footer {
+  overflow: hidden;
+  background-color: #406529;
+  padding: 50px 0 50px 0;
+}
+.footer .logo-footer {
+  margin: 0 0 15px 0;
+}
+.footer .footer-title {
+  margin: 0 0 10px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.footer .footer-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #93c01f;
+}
+.footer .menu-footer ul {
+  margin: 0;
+  padding: 0;
+}
+.footer .menu-footer ul li {
+  list-style: none;
+}
+.footer .menu-footer ul li a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #93c01f;
+}
+
+.footer .menu-footer ul li a:hover {
+  color: #fff;
+  font-weight: 500;
+}
+
+.footer .line {
+  margin: 80px 0 0 0;
+  background-color: #93c01f;
+  width: 100%;
+  height: 1.5px;
+}
+.footer .line img {
+  margin: 0 auto;
+  width: 100px;
+  height: auto;
+  display: block;
+  position: relative;
+  top: -50px;
+}
