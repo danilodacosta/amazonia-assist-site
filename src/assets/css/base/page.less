@@ -133,6 +133,7 @@ body {
 //
 
 .sobre {
+  min-height: 480px;
   margin: 220px 0 0 0;
   .sobre-title {
     padding: 0 0 15px 0;
@@ -144,11 +145,11 @@ body {
     color: @gray-10;
   }
   .sobre-description {
-    margin: 0 0 30px 0;
-    font-size: 18px;
+    margin: 100px 0 30px 0;
+    font-size: 28px;
     font-weight: lighter;
     font-family: @open;
-    color: @gray-10;
+    color: #5D5D5D;
   }
   .bg-sobre {
     z-index: @z-index-1;
@@ -206,128 +207,230 @@ body {
 
 .atuacao {
   margin: -200px 0 0 0;
-  padding: 0 0 150px 0;
+  padding: 0 0 80px 0;
   .bg-atuacao {
-    margin-top: 55px;
+    margin: 55px 0 20px 0;
   }
   .atuacao-title {
     padding: 0 0 15px 0;
-    margin: 0 0 35px 0;
-    border-bottom: 2px solid @green;
-    font-size: 28px;
+    margin: 0 0 0 0;
+    font-size: 22px;
     font-weight: bold;
     font-family: @open;
-    color: @gray-10;
+    color: #93C01F;
   }
   .atuacao-description {
-    margin: 0 0 30px 0;
+    margin: 25px 0 30px 0;
     font-size: 18px;
     font-weight: lighter;
     font-family: @open;
-    color: @gray-10;
+    color: #5D5D5D;
   }
 }
+
+//
+// Qualidade de Vida
+//
+
+.qualidade-vida {
+  position: relative;
+  padding: 55px 0 55px 0;
+  background-color: #F9F9F9;
+  .col-md-6 {
+    padding: 0 55px 0 55px;
+  }
+  .qualidade-vida-title {
+    padding: 0 0 15px 0;
+    margin: 0 0 0 0;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: @open;
+    color: #93C01F;
+  }
+  .qualidade-vida-description {
+    margin: 10px 0 20px 0;
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: @open;
+    color: #5D5D5D;
+  }
+  .qualidade-vida-box {
+    background-image: url(../../img/bg-qualidade-vida.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+//
+// Educando e Crescendo
+//
+
+.educando-crescendo {
+  position: relative;
+  padding: 55px 0 55px 0;
+  background-color: #F9F9F9;
+  .col-md-6 { 
+    float: right;
+    padding: 0 55px 0 55px;
+  }
+  .educando-crescendo-title {
+    padding: 0 0 15px 0;
+    margin: 0 0 0 0;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: @open;
+    color: #93C01F;
+  }
+  .educando-crescendo-description {
+    margin: 10px 0 20px 0;
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: @open;
+    color: #5D5D5D;
+  }
+  .educando-crescendo-box {
+    background-image: url(../../img/bg-educando-crescendo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+  }
+}
+
 //
 // Serviços
 //
 
-.plano-servicos {
-  margin: 180px 0 0 0;
-  padding: 35px 0 70px 0;
-  .servicos-description {
-    margin: 30px 0 30px 0;
+.amazonia-care {
+  position: relative;
+  margin: 175px 0 0 0;
+  padding: 55px 0 55px 0;
+  background-color: #1DBBEE;
+  .col-md-6 { 
+    float: right;
+    padding: 0 55px 0 55px;
+  }
+  .bg-icon-cuidador {
+    margin: 0 0 25px 0;
+  }
+  .amazonia-care-description {
+    margin: 10px 0 20px 0;
     font-size: 16px;
     font-weight: lighter;
     font-family: @open;
-    color: @gray-10;
+    color: #fff;
   }
-}
-
-// background médico
-.bg-medico {
-  position: absolute;
-  top: 220px;
-  right: 150px;
-  z-index: @z-index-1;
-}
-
-// background serviços
-.bg-plano-servicos {
-  overflow: hidden;
-  .col-md-6 {
-    padding: 0;
-  }
-  .bg-plano {
+  .amazonia-care-box {
+    background-image: url(../../img/bg-cuidador.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: absolute;
-    top: 215px;
-    right: 200px;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 0;
   }
-  .bg-medico-1 {
-    background-color: @gray-20;
-    width: 100%;
-    height: 130px;
-  }
-  .bg-medico-2 {
-    background-image: url(../../img/tarja.png);
-    background-color: @gray-20;
-    width: 100%;
-    height: 130px;
-  }
-}
-
-.plano_1 {
-  padding: 30px 0 45px 0;
-  background-color: @green-20;
-  .menu-servicos {
-    margin: 50px 0 0 0;
+  .amazonia-care-list {
     ul {
+      margin: 0 0 65px 15px;
+      padding: 0 0 0 0;
       li {
-        color: @white;
-        a {
-          font-family: @open;
-          font-size: 18px;
-          font-weight: normal;
-          color: @white;
-          text-decoration: none;
-        }
+        margin: 0 0 0 0;
+        padding: 0 0 0 0; 
+        font-size: 16px;
+        font-weight: bold;
+        font-family: @open;
+        color: #fff;
       }
+    }
+  }
+  .btn-care {
+    background-color: #015772;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    margin: 0px 0 0 0;
+    padding: 25px 50px 25px 50px;
+    font-weight: bold;
+    font-family: @open;
+    font-size: 22px;
+    &:hover {
+      text-decoration: none;
     }
   }
 }
 
-.plano-consultoria {
-  .servicos-description {
-    margin: 15px 0 30px 125px;
+.amazonia-csaude {
+  position: relative;
+  margin: 0 0 0 0;
+  padding: 55px 0 55px 0;
+  background-color: #21BF7F;
+  .col-md-6 { 
+    padding: 0 55px 0 55px;
+  }
+  .bg-icon-cuidador {
+    margin: 0 0 25px 0;
+  }
+  .amazonia-csaude-description {
+    margin: 10px 0 20px 0;
     font-size: 16px;
     font-weight: lighter;
     font-family: @open;
-    color: @gray-10;
+    color: #fff;
   }
-  .bg-icon-cuidador {
-    margin: 65px 0 20px 124px;
+  .amazonia-csaude-box {
+    background-image: url(../../img/icon-medico.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
   }
-  .bg-cuidador {
-    width: 590px;
-    height: auto;
-  }
-}
-
-.plano_2 {
-  padding: 30px 0 45px 0;
-  background-color: @blue;
-  .menu-servicos {
-    margin: 50px 0 0 0;
+  .amazonia-csaude-list {
     ul {
+      margin: 0 0 65px 15px;
+      padding: 0 0 0 0;
       li {
-        color: @white;
-        a {
-          font-family: @open;
-          font-size: 18px;
-          font-weight: normal;
-          color: @white;
-          text-decoration: none;
-        }
+        margin: 0 0 0 0;
+        padding: 0 0 0 0; 
+        font-size: 16px;
+        font-weight: bold;
+        font-family: @open;
+        color: #00512A;
       }
+    }
+  }
+  .btn-care {
+    background-color: #00512A;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    left: 0;
+    margin: 0px 0 0 0;
+    padding: 25px 50px 25px 50px;
+    font-weight: bold;
+    font-family: @open;
+    font-size: 22px;
+    text-align: right;
+    &:hover {
+      text-decoration: none;
     }
   }
 }
